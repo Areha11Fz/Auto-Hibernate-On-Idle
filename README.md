@@ -49,3 +49,11 @@ Run PowerShell as Administrator, then execute the desired script:
 - The scheduled task uses the SYSTEM account with HIGHEST privileges
 - When hibernation is triggered, you have 60 seconds to cancel by closing the popup window
 - Hibernation must be supported and enabled on your system for this to work
+
+## Checking Task Status
+
+To verify if the idle hibernation task is installed and active, run:
+
+```powershell
+schtasks /query /tn "Force Hibernate After Idle (Cancelable)" /v /fo list
+```
